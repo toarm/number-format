@@ -26,21 +26,21 @@ class NumberFormat extends HTMLElement {
         this.minDigits = 2;
         this.maxDigits = 2;
         this.locale = navigator.language;
+
+        this.render = debounce(() => {
+            requestAnimationFrame(() => {
+                if (this.number) {
+                    this.innerText = Number(this.number).toLocaleString(this.locale, this.getLocaleProperties())
+                } else {
+                    this.innerText = "";
+                }
+            })
+        }, 0);
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this[name] = newValue;
         this.render();
-    }
-
-    render() {
-        requestAnimationFrame(() => {
-            if (this.number) {
-                this.innerText = Number(this.number).toLocaleString(this.locale, this.getLocaleProperties())
-            } else {
-                this.innerText = "";
-            }
-        });
     }
 
     getLocaleProperties() {
@@ -57,5 +57,14 @@ class NumberFormat extends HTMLElement {
         return this.currency !== void 0 ? "currency" : "decimal";
     }
 }
+
+const debounce = (fn, time) => {
+    let key;
+    return function() {
+        const functionCall = () => fn.apply(this, arguments);
+        clearTimeout(key);
+        key = setTimeout(functionCall, time);
+    }
+};
 
 customElements.define(NumberFormat.is, NumberFormat);
