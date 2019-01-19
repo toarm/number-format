@@ -1,0 +1,14 @@
+{
+  "name": "number-format",
+  "version": "1.0.0",
+  "description": "A simple Webcomponent to format numbers automatically according to the browser language or configure it manually. Only VanillaJS",
+  "main": "number-format.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Tobias Armbruster",
+  "license": "MIT",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.1.3"
+  }
+}

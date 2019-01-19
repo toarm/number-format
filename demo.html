@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Format Demo</title>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="number-format.js"></script>
+    <style>
+        xmp {
+            background-color: lightgray;
+            padding: 3px;
+            display: inline-block;
+        }
+
+        xmp:after {
+            content: ": ";
+        }
+
+        number-format {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h2>Default - Browser Locale</h2>
+<xmp><number-format number="5.2136"></number-format></xmp><number-format number="5.2136"></number-format>
+
+<h2>British Currency Style</h2>
+<xmp><number-format number="5.2136" locale="en-GB" currency="GBP"></number-format></xmp><number-format number="5.2136" locale="en-GB" currency="GBP"></number-format>
+
+<h2>German Number - Using ,</h2>
+<xmp><number-format number="5.2136" locale="de-DE"></number-format></xmp><number-format number="5.2136" locale="de-DE"></number-format>
+
+<h2>German Currency</h2>
+<xmp><number-format number="5.2136" locale="de-DE" currency="EUR"></number-format></xmp><number-format number="5.2136" locale="de-DE" currency="EUR"></number-format>
+
+<h2>4 Digits</h2>
+<xmp><number-format number="5.2136" min-digits="4" max-digits="4"></number-format></xmp><number-format number="5.2136" min-digits="4" max-digits="4"></number-format>
+</body>
+</html>
