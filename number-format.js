@@ -36,7 +36,7 @@ class NumberFormat extends HTMLElement {
     render() {
         requestAnimationFrame(() => {
             if (this.number) {
-                this.innerText = new Number(this.number).toLocaleString(this.locale, this.getLocaleProperties())
+                this.innerText = Number(this.number).toLocaleString(this.locale, this.getLocaleProperties())
             } else {
                 this.innerText = "";
             }
