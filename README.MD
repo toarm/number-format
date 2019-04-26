@@ -1,6 +1,10 @@
 # number-format
 A simple ultra lightweight VanillaJS Webcomponent to display numbers including currencies.
 
+* **No dependencies**
+* **1.87kb Source Code**
+* **800 Bytes zipped**
+
 ## Usage 
 See the [demo.html](https://toarm.github.io/number-format/demo.html) for the results.
 
