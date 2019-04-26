@@ -1,3 +1,5 @@
+const DEFAULT_DIGITS = 2;
+
 class NumberFormat extends HTMLElement {
     static get is() {
         return "number-format";
@@ -18,13 +20,11 @@ class NumberFormat extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["number", "minDigits", "maxDigits", "currency", "locale"];
+        return ["number", "min-digits", "max-digits", "currency", "locale"];
     }
 
     constructor() {
         super();
-        this.minDigits = 2;
-        this.maxDigits = 2;
         this.locale = navigator.language;
 
         this.render = debounce(() => {
@@ -44,10 +44,10 @@ class NumberFormat extends HTMLElement {
     }
 
     getLocaleProperties() {
-        const {minDigits, maxDigits, currency} = this;
+        const {currency} = this;
         return {
-            minimumFractionDigits: minDigits,
-            maximumFractionDigits: maxDigits,
+            minimumFractionDigits: this._getIntAttribute("min-digits"),
+            maximumFractionDigits: this._getIntAttribute("max-digits"),
             style: this.getStyle(),
             currency
         };
@@ -56,7 +56,13 @@ class NumberFormat extends HTMLElement {
     getStyle() {
         return this.currency !== void 0 ? "currency" : "decimal";
     }
+
+    _getIntAttribute(name) {
+        const value = parseInt(this.getAttribute(name));
+        return isNaN(value) ? DEFAULT_DIGITS : value;
+    }
 }
+
 
 const debounce = (fn, time) => {
     let key;
