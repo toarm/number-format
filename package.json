@@ -7,5 +7,14 @@
   "license": "MIT",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.1.3"
-  }
+  },
+  "keywords": ["number", "format", "webcomponent", "vanilla"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toarm/number-format.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toarm/number-format/issues"
+  },
+  "homepage": "https://toarm.github.io/number-format/demo.html"
 }
