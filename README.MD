@@ -2,7 +2,8 @@
 A simple ultra lightweight VanillaJS Webcomponent to display numbers including currencies.
 
 ## Usage 
-See the demo.html for the results.
+See the [demo.html](https://toarm.github.io/number-format/demo.html) for the results.
+
 ### Default - Browser Locale
 `<number-format number="5.2136"></number-format>`
 
