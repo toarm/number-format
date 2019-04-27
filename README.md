@@ -6,6 +6,17 @@ A simple ultra lightweight VanillaJS Webcomponent to display numbers including c
 * **800 Bytes zipped**
 
 ## Usage 
+Include number-format.js:
+```html
+    <head>
+      <!-- if you want to support legacy browser add the webcomponents-loader -->
+      <!-- <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> -->
+      <script type="module" src="node_modules/number-format-webcomponent/number-format.js"></script>
+      ...
+      
+    <body>
+      <number-format number="5.2136"></number-format>
+```
 See the [demo.html](https://toarm.github.io/number-format/demo.html) for the results.
 
 ### Default - Browser Locale
