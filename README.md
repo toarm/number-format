@@ -1,4 +1,4 @@
-# number-format
+# number-format-(webcomponent)
 A simple ultra lightweight VanillaJS Webcomponent to display numbers including currencies.
 
 * **No dependencies**
