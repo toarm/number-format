@@ -5,6 +5,9 @@ A simple ultra lightweight VanillaJS Webcomponent to display numbers including c
 * **1.87 kb Source Code**
 * **800 Bytes zipped**
 
+## Installation
+`npm i -S number-format-webcomponent`
+
 ## Usage 
 Include number-format.js:
 ```html
