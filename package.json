@@ -1,6 +1,6 @@
 {
   "name": "number-format-webcomponent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple Webcomponent to format numbers automatically according to the browser language or manually. VanillaJS only",
   "main": "number-format.js",
   "author": "Tobias Armbruster",
