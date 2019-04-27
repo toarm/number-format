@@ -12,23 +12,28 @@ See the [demo.html](https://toarm.github.io/number-format/demo.html) for the res
 ```html
 <number-format number="5.2136"></number-format>
 ```
+`Result depends on your Browser Locale. Please see `[demo.html](https://toarm.github.io/number-format/demo.html)
 
 ### British Currency Style
 ```html
 <number-format number="5.2136" locale="en-GB" currency="GBP"></number-format>
 ```
+`£5.21`
 
-### German Number - Using ,
+### German Style - Using ,
 ```html
 <number-format number="5.2136" locale="de-DE"></number-format>
 ```
+`5,21`
 
-### German Currency
+### German Currency Style
 ```html
 <number-format number="5.2136" locale="de-DE" currency="EUR"></number-format>
 ```
+`5,21 €`
 
 ### 4 Digits
 ```html
 <number-format number="5.2136" min-digits="4" max-digits="4"></number-format>
 ```
+`Result depends on your Browser Locale. Please see `[demo.html](https://toarm.github.io/number-format/demo.html)
